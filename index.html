@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <title>Restaurante Porpeta</title>
+  </head>
+  <body id="my-element">
+    <header id="my-element">
+      <img
+        class="logo"
+        src="https://i.ibb.co/c1y03sL/Logo.png"
+      />
+      <button id="show-nav" class="show-nav">Menu
+      </button>
+      <h1 class="nome-rest">Porpeta da Madruga</h1>
+
+      <nav id="my-element">
+        <ul id="my-element">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="aboutus.html">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="my-element">
+        <div id="my-element" class="carousel">
+          <img src="https://i.ibb.co/3p3swnX/carrosel1.png" alt="" />
+          <img src="https://i.ibb.co/S0bsRYp/carrosel3.png" alt="" />
+          <img src="https://i.ibb.co/RBCrrKK/carrosel4.png" alt="" />
+          <img src="https://i.ibb.co/brP7THR/carrosel2.png" alt="" />
+        </div>
+      </section>
+      <section id="my-element">
+        <div id="my-element" class="titulo-destaque">
+          <h2>Destaques da Semana</h2>
+        </div>
+        <ul>
+          <li>
+            <div class="card">
+              <img
+                id="my-element"
+                src="./pictures/Receita.jpg"
+                alt="Porpeta com Polenta e molho Pesto"
+              />
+              <div class="card-body">
+                <h3>Porpeta com Polenta e molho Pesto</h3>
+                <p>
+                  Uma deliciosa combinação de sabores que você não pode perder!
+                  Aproveite nosso prato especial da semana.
+                </p>
+                <a href="#" class="button">Saiba mais</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img
+                id="my-element"
+                src="./pictures/Receita.jpg"
+                alt="Porpeta sem porpeta e molho de tomate cheio de porpeta"
+              />
+              <div class="card-body">
+                <h3>Porpeta sem porpeta e molho de tomate cheio de porpeta</h3>
+                <p>
+                  Uma opção vegetariana com muito sabor! Experimente nossa
+                  porpeta sem porpeta com um delicioso molho de tomate cheio de
+                  porpeta.
+                </p>
+                <a href="#" class="button">Saiba mais</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img
+                id="my-element"
+                src="./pictures/Receita.jpg"
+                alt="Salame de porpeta cozido no bafo da sogra"
+              />
+              <div class="card-body">
+                <h3>Salame de porpeta cozido no bafo da sogra</h3>
+                <p>
+                  Uma receita especial da casa, feita com muito carinho e
+                  ingredientes selecionados. Não deixe de experimentar!
+                </p>
+                <a href="#" class="button">Saiba mais</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="my-element"></section>
+    </main>
+    <footer id="my-element">
+      <nav id="my-element" class="rodape">
+        <ul>
+            <li>
+              <p><a href="reservas.html">Fale Conosco</a></p>                       
+            </li>
+               <div id="my-element" class="verticalline"></div>   
+               <div class="imgfootermobile">
+            <li>
+              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+            </li>
+            <li>
+              <img src="https://cdn-icons-png.flaticon.com/128/174/174848.png">
+            </li>
+            <li>
+              <img src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png">
+            </li>
+            <li>
+              <img src="https://cdn-icons-png.flaticon.com/512/3116/3116490.png">
+            </li>
+            <li>
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png">
+            </li>
+          </div>
+        </ul>
+
+      </nav>
+      <p class="footer-copy">&copy; 2023 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").slick({
+          dots: true, // exibe pontos de navegação abaixo do carrossel
+          arrows: false, // oculta os botões de navegação padrão
+          autoplay: true, // inicia a reprodução automática
+          autoplaySpeed: 2000, // define a velocidade da reprodução automática em milissegundos
+        });
+        const showNavButton = document.querySelector("#show-nav");
+        const nav = document.querySelector("header #my-element");
+        console.log(showNavButton)
+
+        if (showNavButton && nav) {
+          showNavButton.addEventListener("click", () => {
+            nav.classList.toggle("show-nav"); console.log(showNavButton)
+            
+          });
+        }
+
+        window.addEventListener("resize", function () {
+          // Verifica o tamanho da tela atual
+          if (window.innerWidth < 600) {
+            // Se a largura da tela for menor que 600 pixels,
+            // altera a classe do elemento para torná-lo responsivo
+            document.getElementById("my-element").classList.add("responsive");
+          } else {
+            // Caso contrário, remove a classe para que o elemento volte ao normal
+            document
+              .getElementById("my-element")
+              .classList.remove("responsive");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
